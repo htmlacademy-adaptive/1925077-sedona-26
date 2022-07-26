@@ -1,7 +1,7 @@
 # Личный проект «Седона» 
 
 * Студент: [Валерий Комиссаров](https://up.htmlacademy.ru/adaptive/26/user/1925077).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Остаповец](https://htmlacademy.ru/profile/seraphim).
 
 ---
 
