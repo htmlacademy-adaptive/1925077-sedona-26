@@ -1,6 +1,17 @@
-// .page-header {
+.page-header {
+  position: relative;
 
-// }
+  display: flex;
+  justify-content: center;
+
+  height: 56px;
+}
+
+.page-header__nav {
+  &--hidden {
+    display: none;
+  }
+}
 
 .page-header__menu-list {
   .list-reset();
@@ -27,15 +38,44 @@
 .page-header__link-of-nav-menu {
   .link-reset();
 
-  margin: 17px auto 12px;
+  padding: 17px 5px 12px;
+  width: 100%;
 
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
-
   text-align: center;
+
   text-transform: uppercase;
 
   color: @third-color;
 }
 
+.page-header__link-logo {
+  line-height: 0;
+}
+
+.page-header__logo {
+}
+
+.page-header__menu-toggler {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 56px;
+  height: 56px;
+
+  border: none;
+  background-color: transparent;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 22px;
+    background-image: linear-gradient(#81b3d2, 4px, #ffffff 4px, 9px, #81b3d2 9px, 13px, #ffffff 13px, 18px, #81b3d2 18px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
