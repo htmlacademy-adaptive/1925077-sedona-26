@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <svg style="display: none;">
+      <symbol id="under-intro-background" width="600" height="57" viewBox="0 0 600 57" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M249.6 23.7 0 0v57h600L249.6 0v23.7Z" fill="#fff"/></symbol>
+    </svg>
     <header class="page-header">
       <nav class="page-header__nav page-header__nav--hidden">
         <ul class="page-header__menu-list">
@@ -17,15 +20,23 @@
         </ul>
       </nav>
 
-      <a href="index.html" class="page-header__link-logo">
+      <a class="page-header__link-logo" href="index.html">
         <img class="page-header__logo" src="./img/logos/logo-mobile.png" alt="На главную страницу." width="185" height="96">
       </a>
-
-      <button class="page-header__menu-toggler" type="button"><span class="visually-hidden">Открыть или закрыть меню.</span></button>
+      <!--
+        page-header__menu-toggler--opening-appearance
+        page-header__menu-toggler--closing-appearance
+      -->
+      <button class="page-header__menu-toggler page-header__menu-toggler--opening-appearance" type="button"><span class="visually-hidden">Открыть или закрыть меню.</span></button>
     </header>
 
     <main>
       <section class="index-reasons">
+        <div class="index-reasons__for-bacground-image">
+          <svg class="index-reasons__under-intro-background" width="600" height="57" viewBox="0 0 600 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <use href="#under-intro-background"></use>
+          </svg>
+        </div>
         <div class="index-reasons__standard-title-description standard-title-description">
           <h1 class="standard-title-description__title">
             СЕДОНА — небольшой городок в АРИЗОНЕ, зАСЛУЖИвающий большего!
