@@ -26,70 +26,14 @@
   margin-top: -4px;
 }
 
-.first-reason__photo-wrapper {
+.index-reasons__photo-wrapper {
   display: flex;
   justify-content: center;
 }
 
-.first-reason__photo {
+.index-reasons__photo {
   object-fit: cover;
   max-width: 100%;
   height: 260px;
   min-height: 100%;
-}
-
-.first-reason__list {
-  .list-reset();
-  padding: 24px 18px 52px;
-}
-
-.first-reason__item {
-  position: relative;
-  padding-left: 44px;
-  display: flex;
-  justify-content: space-between;
-
-  &:not(:first-child) {
-    margin-top: 30px;
-  }
-
-  &::before {
-    position: absolute;
-    left: 0;
-    content: "";
-    width: 40px;
-    height: 40px;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  &--house::before {
-    top: -10px;
-    background-image: url("../img/icons/first-reasons/icon-house.svg");
-  }
-
-  &--food::before {
-    top: -10px;
-    background-image: url("../img/icons/first-reasons/icon-burger.svg");
-  }
-
-  &--gift::before {
-    top: -10px;
-    background-image: url("../img/icons/first-reasons/icon-gift.svg");
-  }
-}
-
-.first-reason__title {
-  margin: 0;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
-  color: @second-color;
-  text-transform: uppercase;
-}
-
-.first-reason__description {
-  margin: 0;
-  margin-top: 16px;
-  text-transform: uppercase;
 }

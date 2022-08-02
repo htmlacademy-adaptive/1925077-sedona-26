@@ -1,0 +1,56 @@
+.reasons-list-with-icons {
+  padding: 32px 18px 52px;
+}
+
+.reasons-list-with-icons__list {
+  .list-reset();
+}
+
+.reasons-list-with-icons__item {
+  position: relative;
+  padding-left: 44px;
+  display: flex;
+  justify-content: space-between;
+
+  &:not(:first-child) {
+    margin-top: 30px;
+  }
+
+  &::before {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &--house::before {
+    background-image: url("../img/icons/first-reasons/icon-house.svg");
+  }
+
+  &--food::before {
+    background-image: url("../img/icons/first-reasons/icon-burger.svg");
+  }
+
+  &--gift::before {
+    background-image: url("../img/icons/first-reasons/icon-gift.svg");
+  }
+}
+
+.reasons-list-with-icons__title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: @second-color;
+  text-transform: uppercase;
+}
+
+.reasons-list-with-icons__description {
+  margin: 0;
+  margin-top: 16px;
+  text-transform: uppercase;
+}
