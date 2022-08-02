@@ -1,4 +1,5 @@
 .reason {
+  position: relative;
   padding: 38px 18px 36px;
   background-color: @second-background;
   text-align: center;
@@ -7,6 +8,16 @@
 
   &--other {
     background-color: @third-background;
+  }
+
+  &--other:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: 0;
+    height: 1px;
+    background-color: @other-reason-border;
   }
 }
 
