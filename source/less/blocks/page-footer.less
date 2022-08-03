@@ -18,6 +18,11 @@
 
 .page-footer__social-links-list {
   .list-reset();
+  margin-top: 34px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 48px);
+  gap: 6px;
 }
 
 .page-footer__social-item {
@@ -55,10 +60,17 @@
 }
 
 .page-footer__copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
 }
 
 .page-footer__copyright-text {
+  text-transform: uppercase;
+  color: @second-color;
 }
 
 .page-footer__copyright-logo {
+  margin-left: 12px;
 }
