@@ -1,13 +1,6 @@
-.page-header {
-  position: relative;
-
-  display: flex;
-  justify-content: center;
-
-  height: 56px;
-}
-
 .page-header__nav {
+  display: block;
+
   &--hidden {
     display: none;
   }
@@ -37,27 +30,28 @@
 
 .page-header__link-of-nav-menu {
   .link-reset();
-
-  padding: 17px 18px 12px;
+  padding: 17px 0 12px;
   width: 100%;
-
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   text-align: center;
-
   text-transform: uppercase;
-
   color: @third-color;
+  .default-padding();
 }
 
-.page-header__link-logo {
-  line-height: 0;
-  z-index: 1;
+.page-header__link-and-button-wrapper {
+  height: 56px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 01;
 }
 
-// .page-header__logo {
-// }
+.page-header__logo {
+  display: block;
+}
 
 .page-header__menu-toggler {
   position: absolute;
@@ -65,7 +59,7 @@
   top: 0;
   width: 56px;
   height: 56px;
-
+  padding: 0;
   border: none;
   background-color: transparent;
 
