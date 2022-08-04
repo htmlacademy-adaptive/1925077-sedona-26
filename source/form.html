@@ -102,64 +102,76 @@
       <div class="user-form__fieldset-wrapper">
         <fieldset class="user-form__fieldset">
           <legend class="user-form__legend">Контактная информация:</legend>
-          <label class="user-form__label-around-text-input">
-            <div class="user-form__label-text">Контактный телефон*:</div>
-            <input class="user-form__text-input user-form__text-input--phone-and-email" type="text" name="phone"
-              id="phone" placeholder="Введите телефон">
-            <svg class="phone-and-email-icon" width="18" height="18" viewBox="0 0 18 18"
-              xmlns="http://www.w3.org/2000/svg" fill="#000000">
-              <use href="#input-phone"></use>
-            </svg>
-          </label>
-          <label class="user-form__label-around-text-input">
-            <div class="user-form__label-text">Электронная почта*:</div>
-            <input class="user-form__text-input  user-form__text-input--phone-and-email" type="text" name="email"
-              id="email" placeholder="Введите e-mail">
-            <svg class="phone-and-email-icon" width="18" height="18" viewBox="0 0 18 18"
-              xmlns="http://www.w3.org/2000/svg" fill="#000000">
-              <use href="#input-email"></use>
-            </svg>
-          </label>
+          <div class="user-form__inputs-wrapper">
+            <label class="user-form__label-around-text-input">
+              <div class="user-form__label-text">Контактный телефон*:</div>
+              <input class="user-form__text-input user-form__text-input--phone-and-email" type="text" name="phone"
+                id="phone" placeholder="Введите телефон">
+              <svg class="phone-and-email-icon" width="18" height="18" viewBox="0 0 18 18"
+                xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                <use href="#input-phone"></use>
+              </svg>
+            </label>
+            <label class="user-form__label-around-text-input">
+              <div class="user-form__label-text">Электронная почта*:</div>
+              <input class="user-form__text-input  user-form__text-input--phone-and-email" type="text" name="email"
+                id="email" placeholder="Введите e-mail">
+              <svg class="phone-and-email-icon" width="18" height="18" viewBox="0 0 18 18"
+                xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                <use href="#input-email"></use>
+              </svg>
+            </label>
+          </div>
         </fieldset>
       </div>
 
       <div class="user-form__fieldset-wrapper">
         <fieldset class="user-form__fieldset">
           <legend class="user-form__legend">ВАше Общее впечатление:</legend>
-          <label class="user-form__label-around-radio-checkbox">
-            <input class="user-form__radio" type="radio" name="radio" value="positive" checked>
-            Скорее положительное
-          </label>
-          <label class="user-form__label-around-radio-checkbox">
-            <input class="user-form__radio" type="radio" name="radio" value="negative">
-            Скорее отрицательное
-          </label>
-          <label class="user-form__label-around-radio-checkbox">
-            <input class="user-form__radio" type="radio" name="radio" value="difficult-to-answer">
-            Затрудняюсь ответить
-          </label>
+          <div class="user-form__inputs-wrapper">
+            <label class="user-form__label-around-radio-checkbox">
+              <input class="user-form__radio" type="radio" name="radio" value="positive" checked>
+              <span class="user-form__radio-and-checkbox-descroption">Скорее положительное</span>
+            </label>
+            <label class="user-form__label-around-radio-checkbox">
+              <input class="user-form__radio" type="radio" name="radio" value="negative">
+              <span class="user-form__radio-and-checkbox-descroption">Скорее отрицательное</span>
+            </label>
+            <label class="user-form__label-around-radio-checkbox">
+              <input class="user-form__radio" type="radio" name="radio" value="difficult-to-answer">
+              <span class="user-form__radio-and-checkbox-descroption">Затрудняюсь ответить</span>
+            </label>
+          </div>
         </fieldset>
       </div>
 
       <div class="user-form__fieldset-wrapper">
         <fieldset class="user-form__fieldset">
           <legend class="user-form__legend">посещенные достопримечательности:</legend>
-          <label class="user-form__label-around-radio-checkbox">
-            <input class="user-form__radio" type="checkbox" name="bridge-of-devil" value="bridge-of-devil" checked>
-            Мост Дьявола
-          </label>
-          <label class="user-form__label-around-radio-checkbox">
-            <input class="user-form__radio" type="checkbox" name="bell-mountain" value="bell-mountain" checked>
-            Гора-Колокол
-          </label>
-          <label class="user-form__label-around-radio-checkbox">
-            <input class="user-form__radio" type="checkbox" name="slide-park" value="slide-park" checked>
-            Слайд-парк
-          </label>
-          <label class="user-form__label-around-radio-checkbox">
-            <input class="user-form__radio" type="checkbox" name="red-rocks" value="red-rocks">
-            Красные скалы
-          </label>
+          <div class="user-form__inputs-wrapper">
+            <label class="user-form__label-around-radio-checkbox">
+              <input class="user-form__checkbox-input" type="checkbox" name="bridge-of-devil" value="bridge-of-devil"
+                checked>
+              <span class="user-form__custom-checkbox custom-checkbox"></span>
+              <span class="user-form__radio-and-checkbox-descroption">Мост Дьявола</span>
+            </label>
+            <label class="user-form__label-around-radio-checkbox">
+              <input class="user-form__checkbox-input" type="checkbox" name="bell-mountain" value="bell-mountain"
+                checked disabled>
+              <span class="user-form__custom-checkbox custom-checkbox"></span>
+              <span class="user-form__radio-and-checkbox-descroption">Гора-Колокол</span>
+            </label>
+            <label class="user-form__label-around-radio-checkbox">
+              <input class="user-form__checkbox-input" type="checkbox" name="slide-park" value="slide-park" disabled>
+              <span class="user-form__custom-checkbox custom-checkbox"></span>
+              <span class="user-form__radio-and-checkbox-descroption">Слайд-парк</span>
+            </label>
+            <label class="user-form__label-around-radio-checkbox">
+              <input class="user-form__checkbox-input" type="checkbox" name="red-rocks" value="red-rocks">
+              <span class="user-form__custom-checkbox custom-checkbox"></span>
+              <span class="user-form__radio-and-checkbox-descroption">Красные скалы</span>
+            </label>
+          </div>
         </fieldset>
       </div>
 

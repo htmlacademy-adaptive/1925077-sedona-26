@@ -11,6 +11,7 @@
 }
 
 .user-form__legend {
+  margin-bottom: 20px;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
@@ -64,4 +65,53 @@
   height: 18px;
   bottom: 20px;
   right: 20px;
+}
+
+.user-form__label-around-radio-checkbox {
+  &:not(:first-child) {
+    margin-top: 16px;
+  }
+
+  display: flex;
+  align-items: center;
+}
+
+.user-form__radio-and-checkbox-descroption {
+  margin-left: 16px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: @second-color;
+}
+
+.user-form__radio,
+.user-form__checkbox-input {
+  position: absolute;
+  appearance: none;
+}
+
+.user-form__radio {
+
+}
+
+.user-form__checkbox-input {
+  &:checked + .user-form__custom-checkbox {
+    background-image: url("../img/form/checkbox-bird.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 22px 16px;
+  }
+
+  &:checked:active + .user-form__custom-checkbox {
+    background-image: url("../img/form/checkbox-bird-disabled.svg");
+  }
+}
+
+.user-form__custom-checkbox {
+  width: 46px;
+  height: 46px;
+  background-color: @text-input-background;
+  border-radius: 4px;
+
+  flex-shrink: 0;
 }
