@@ -53,15 +53,17 @@
     <form action="#" class="user-form">
       <fieldset class="user-form__fieldset">
         <legend class="user-form__legend">Представьтесь:</legend>
-        <label class="user-form__label-around-text-input">ИМЯ*:
-          <input class="user-form__text-input" type="text" name="name" id="name" placeholder="Пётр">
-        </label>
-        <label class="user-form__label-around-text-input">ФАМИЛИЯ*:
-          <input class="user-form__text-input" type="text" name="surname" id="surname" placeholder="Пустота">
-        </label>
-        <label class="user-form__label-around-text-input">ОТЧЕСТВО*:
-          <input class="user-form__text-input" type="text" name="patronymic" id="patronymic" placeholder="Викторович">
-        </label>
+        <div class="user-form__inputs-wrapper">
+          <label class="user-form__label-around-text-input"><div class="user-form__label-text">ИМЯ*:</div>
+            <input class="user-form__text-input" type="text" name="name" id="name" placeholder="Пётр">
+          </label>
+          <label class="user-form__label-around-text-input"><div class="user-form__label-text">ФАМИЛИЯ*:</div>
+            <input class="user-form__text-input" type="text" name="name" id="name" placeholder="Пустота">
+          </label>
+          <label class="user-form__label-around-text-input"><div class="user-form__label-text">ОТЧЕСТВО*:</div>
+            <input class="user-form__text-input" type="text" name="name" id="name" placeholder="Викторович">
+          </label>
+        </div>
       </fieldset>
 
       <fieldset class="user-form__fieldset">
