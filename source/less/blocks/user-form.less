@@ -77,20 +77,27 @@
   display: flex;
   align-items: center;
 
-  &:hover .user-form__custom-checkbox {
+  &:hover .user-form__custom-checkbox,
+  &:hover .user-form__custom-radio {
     background-color: @text-input-background-hover;
   }
 
-  &:active .user-form__custom-checkbox {
+  &:active .user-form__custom-checkbox,
+  &:active .user-form__custom-radio {
     background-color: @text-input-background-active;
   }
 
-  .user-form__checkbox-input:disabled + .custom-checkbox {
+  .user-form__checkbox-input:disabled + .user-form__custom-checkbox,
+  .user-form__radio:disabled + .user-form__custom-radio {
     background-color: fade(@text-input-background, 30%);
   }
 
-  .user-form__checkbox-input:checked:disabled + .custom-checkbox > .user-form__checkbox-bird {
+  .user-form__checkbox-input:checked:disabled + .user-form__custom-checkbox > .user-form__checkbox-bird {
     fill: fade(@main-color, 30%);
+  }
+
+  .user-form__radio:checked:disabled + .user-form__custom-radio::before {
+    background-color: fade(@main-color, 30%);
   }
 }
 
@@ -108,12 +115,36 @@
   appearance: none;
 }
 
-// .user-form__radio {
-// }
+.user-form__radio {
+  &:checked ~ .user-form__custom-radio::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background-color: @main-color;
+  }
+}
+
+.user-form__custom-checkbox,
+.user-form__custom-radio {
+  position: relative;
+  width: 46px;
+  height: 46px;
+  background-color: @text-input-background;
+  flex-shrink: 0;
+}
+
+.user-form__custom-radio {
+  border-radius: 50%;
+}
 
 .user-form__checkbox-input {
   &:checked + * .user-form__checkbox-bird {
-    fill: #000000;
+    fill: @main-color;
   }
 
   &:checked:active + * .user-form__checkbox-bird {
@@ -122,12 +153,7 @@
 }
 
 .user-form__custom-checkbox {
-  position: relative;
-  width: 46px;
-  height: 46px;
-  background-color: @text-input-background;
   border-radius: 4px;
-  flex-shrink: 0;
 }
 
 .user-form__checkbox-bird {
