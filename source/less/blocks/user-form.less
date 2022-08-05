@@ -68,12 +68,30 @@
 }
 
 .user-form__label-around-radio-checkbox {
+  cursor: pointer;
+
   &:not(:first-child) {
     margin-top: 16px;
   }
 
   display: flex;
   align-items: center;
+
+  &:hover .user-form__custom-checkbox {
+    background-color: @text-input-background-hover;
+  }
+
+  &:active .user-form__custom-checkbox {
+    background-color: @text-input-background-active;
+  }
+
+  .user-form__checkbox-input:disabled + .custom-checkbox {
+    background-color: fade(@text-input-background, 30%);
+  }
+
+  .user-form__checkbox-input:checked:disabled + .custom-checkbox > .user-form__checkbox-bird {
+    fill: fade(@main-color, 30%);
+  }
 }
 
 .user-form__radio-and-checkbox-descroption {
@@ -90,28 +108,34 @@
   appearance: none;
 }
 
-.user-form__radio {
-
-}
+// .user-form__radio {
+// }
 
 .user-form__checkbox-input {
-  &:checked + .user-form__custom-checkbox {
-    background-image: url("../img/form/checkbox-bird.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 22px 16px;
+  &:checked + * .user-form__checkbox-bird {
+    fill: #000000;
   }
 
-  &:checked:active + .user-form__custom-checkbox {
-    background-image: url("../img/form/checkbox-bird-disabled.svg");
+  &:checked:active + * .user-form__checkbox-bird {
+    fill: rgba(51, 51, 51, 0.3);
   }
 }
 
 .user-form__custom-checkbox {
+  position: relative;
   width: 46px;
   height: 46px;
   background-color: @text-input-background;
   border-radius: 4px;
-
   flex-shrink: 0;
+}
+
+.user-form__checkbox-bird {
+  fill: transparent;
+  position: absolute;
+  width: 22px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
