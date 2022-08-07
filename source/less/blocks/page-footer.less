@@ -28,29 +28,15 @@
   width: 48px;
   height: 48px;
   background-color: @second-background;
+}
 
-  &::before {
-    position: absolute;
-    content: "";
-    width: 24px;
-    height: 24px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background-repeat: no-repeat;
-  }
-
-  &--vk::before {
-    background-image: url("../img/icons/social-nw/vk.svg");
-  }
-
-  &--tg::before {
-    background-image: url("../img/icons/social-nw/telegram.svg");
-  }
-
-  &--yt::before {
-    background-image: url("../img/icons/social-nw/youtube.svg");
-  }
+.page-footer__social-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  transform: translate(-50%, -50%);
 }
 
 .page-footer__copyright {
