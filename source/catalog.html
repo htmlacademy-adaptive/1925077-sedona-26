@@ -14,10 +14,13 @@
       <!--
       При вставке свг удалить: fill="none" и fill с цветом, fill с цветом добавить в use
       пример use:
-          <svg class="like" width="23" height="21" viewBox="0 0 23 21" xmlns="http://www.w3.org/2000/svg" fill="black">
-            <use href="#like-icon"></use>
+          <svg class="like" width="48" height="55" viewBox="0 0 48 55" xmlns="http://www.w3.org/2000/svg" fill="white" fill-opacity="0.7">
+            <use href="#video-play-button"></use>
           </svg>
      -->
+      <symbol id="video-play-button" width="48" height="55" viewBox="0 0 48 55" xmlns="http://www.w3.org/2000/svg">
+        <path d="M48 27.0193L0 54.0193L2.42273e-06 0.0192871L48 27.0193Z" />
+      </symbol>
       <symbol id="like-icon" width="23" height="21" viewBox="0 0 23 21" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" />
@@ -201,6 +204,12 @@
 
         <div class="photo-and-video__video-wrapper">
           <video class="photo-and-video__video" src="#" width="288" height="177" preload="none"></video>
+          <button class="photo-and-video__video-play-button" type="button">
+            <svg class="photo-and-video__play-button-icon" width="48" height="55" viewBox="0 0 48 55"
+              xmlns="http://www.w3.org/2000/svg" fill="white" fill-opacity="0.7">
+              <use href="#video-play-button"></use>
+            </svg>
+          </button>
         </div>
       </section>
     </main>

@@ -68,11 +68,12 @@
 }
 
 .photo-and-video__video-wrapper {
+  position: relative;
   .default-padding();
 }
 
 .photo-and-video__video {
-  background-image: url('../img/page-catalog/video/video-mobile.jpg.jpg');
+  background-image: url("../img/page-catalog/video/video-mobile.jpg.jpg");
   display: block;
   min-width: 280px;
   min-height: 177px;
@@ -81,4 +82,24 @@
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 auto 0;
+}
+
+.photo-and-video__video-play-button {
+  position: absolute;
+  border: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 48px;
+  height: 54px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.photo-and-video__play-button-icon {
+  width: 48px;
+  height: 54px;
 }
