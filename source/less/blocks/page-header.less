@@ -49,6 +49,7 @@
 }
 
 .page-header__link-and-button-wrapper {
+  position: relative;
   height: 56px;
   display: flex;
   justify-content: center;
@@ -67,18 +68,19 @@
   position: absolute;
   right: 0;
   top: 0;
-  width: 56px;
+  width: 64px;
   height: 56px;
   padding: 0;
   border: none;
   background-color: transparent;
   z-index: 3;
+  cursor: pointer;
 
   &--to-open {
     &::before {
       content: "";
       position: absolute;
-      width: 30px;
+      width: 23px;
       height: 22px;
       background-image: linear-gradient(#81b3d2, 4px, rgba(255, 255, 255, 0) 4px, 9px, #81b3d2 9px, 13px, rgba(255, 255, 255, 0) 13px, 18px, #81b3d2 18px);
       top: 50%;
