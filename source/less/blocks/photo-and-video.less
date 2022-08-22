@@ -1,6 +1,7 @@
 .photo-and-video {
 }
 .photo-and-video__standard-title-description {
+  margin-top: 20px;
 }
 .standard-title-description {
 }
@@ -13,7 +14,7 @@
 .photo-and-video__photo-section {
   .default-padding();
   padding-top: 24px;
-  padding-bottom: 24px;
+  padding-bottom: 26px;
   border-top: 1px solid @user-fieldset-border-top;
 }
 .photo-and-video__photo {
@@ -21,28 +22,63 @@
   margin: 0 auto 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 .photo-and-video__name-and-author {
+  margin-top: 16px;
 }
 .photo-and-video__photo-name {
+  margin: 0;
   font-weight: 700;
   text-transform: uppercase;
   color: @second-color;
 }
 .photo-and-video__photo-author {
+  margin: 0;
 }
 .photo-and-video__author-name {
 }
 .photo-and-video__like-wrapper {
+  margin-top: 10px;
   display: flex;
+  align-items: flex-start;
+  align-items: flex-end;
 }
 .photo-and-video__like {
   opacity: 0.3;
+  margin-right: 14px;
 }
 .photo-and-video__photo-likes {
-  margin-left: 14px;
+  margin: 0;
   font-weight: 700;
   text-transform: uppercase;
   color: @second-color;
+  line-height: 1;
+}
+
+.photo-and-video__video-section {
+  border-top: 1px solid @user-fieldset-border-top;
+  margin-top: 4px;
+  padding-bottom: 26px;
+}
+
+.photo-and-video__description {
+  margin-top: 28px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.photo-and-video__video-wrapper {
+  .default-padding();
+}
+
+.photo-and-video__video {
+  background-image: url('../img/page-catalog/video/video-mobile.jpg.jpg');
+  display: block;
+  min-width: 280px;
+  min-height: 177px;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto 0;
 }
