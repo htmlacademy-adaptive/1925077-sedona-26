@@ -19,7 +19,40 @@
 }
 
 .index-reasons__standard-title-description {
-  margin-top: -4px;
+  margin-top: 20px;
+}
+
+.index-reasons__decor-before-reasons {
+  position: relative;
+  background-color: @second-background;
+  height: 37px;
+}
+
+.index-reasons__reason {
+  &:first-child {
+    padding-top: 32px;
+  }
+
+  &--second.reason {
+    padding-top: 39px;
+    padding-bottom: 35px;
+  }
+}
+
+.index-reasons__before-reasons {
+  position: absolute;
+  right: 50%;
+  top: 0;
+
+  &--right {
+    right: auto;
+    left: 50%;
+    transform: scale(-1, 1);
+  }
+}
+
+.index-reasons .standard-title-description__description {
+  margin-top: 36px;
 }
 
 .index-reasons__photo-wrapper {

@@ -14,10 +14,13 @@
       <!--
       При вставке свг удалить: fill="none" и fill с цветом, fill с цветом добавить в use
       пример use:
-          <svg class="like" width="23" height="21" viewBox="0 0 23 21" xmlns="http://www.w3.org/2000/svg" fill="black">
-            <use href="#like-icon"></use>
+          <svg class="before-reasons" width="159" height="37" viewBox="0 0 159 37" xmlns="http://www.w3.org/2000/svg" fill="white">
+            <use href="#before-reasons"></use>
           </svg>
      -->
+      <symbol id="before-reasons" width="384" height="37" viewBox="0 0 384 37" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H384V37L0 0Z" />
+      </symbol>
       <symbol id="like-icon" width="23" height="21" viewBox="0 0 23 21" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" />
@@ -108,13 +111,23 @@
         </div>
         <div class="index-reasons__standard-title-description standard-title-description">
           <h1 class="standard-title-description__title">
-            СЕДОНА — небольшой городок в АРИЗОНЕ, зАСЛУЖИвающий большего!
+            СЕДОНА — небольшой <br> городок в АРИЗОНЕ, <br> зАСЛУЖИвающий большего!
           </h1>
           <p class="standard-title-description__description">
             Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
           </p>
         </div>
-        <section>
+        <div class="index-reasons__decor-before-reasons">
+          <svg class="index-reasons__before-reasons" width="384" height="37" viewBox="0 0 384 37"
+            xmlns="http://www.w3.org/2000/svg" fill="white">
+            <use href="#before-reasons"></use>
+          </svg>
+          <svg class="index-reasons__before-reasons index-reasons__before-reasons--right" width="384" height="37"
+            viewBox="0 0 384 37" xmlns="http://www.w3.org/2000/svg" fill="white">
+            <use href="#before-reasons"></use>
+          </svg>
+        </div>
+        <section class="index-reasons__reasons">
           <div class="index-reasons__reason reason">
             <h2 class="reason__title">Настоящий городок</h2>
             <p class="reason__number">-№1-</p>
@@ -152,7 +165,7 @@
           </div>
         </section>
         <section>
-          <div class="index-reasons__reason reason">
+          <div class="index-reasons__reason index-reasons__reason--second reason">
             <h2 class="reason__title">ТАМ ЕСТЬ Мост дьявола</h2>
             <p class="reason__number">-№2-</p>
             <p class="reason__description">
@@ -165,37 +178,37 @@
           </div>
         </section>
         <section class="reason reason--other">
-          <h2 class="reason__title--other">НЕБОЛЬШАЯ ПЛОЩАДЬ</h2>
-          <p class="reason__number--other">-№3-</p>
-          <p class="reason__description--other">
-            ВСЕ интересные места находятся очень близко
+          <h2 class="reason__title reason__title--other">НЕБОЛЬШАЯ ПЛОЩАДЬ</h2>
+          <p class="reason__number reason__number--other">-№3-</p>
+          <p class="reason__description reason__description--other">
+            ВСЕ интересные места находятся <br> очень близко
           </p>
         </section>
         <section class="reason reason--other">
-          <h2 class="reason__title--other">КРАСИВАЯ ДОРОГА</h2>
-          <p class="reason__number--other">-№4-</p>
-          <p class="reason__description--other">
-            ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!
+          <h2 class="reason__title reason__title--other">КРАСИВАЯ ДОРОГА</h2>
+          <p class="reason__number reason__number--other">-№4-</p>
+          <p class="reason__description reason__description--other">
+            ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА <br> совсем НЕ СКУЧНО!
           </p>
         </section>
         <section class="reason reason--other">
-          <h2 class="reason__title--other">МАЛО ТУРИСТОВ</h2>
-          <p class="reason__number--other">-№5-</p>
-          <p class="reason__description--other">
-            Большинство едет в гранд каньон и толпится там
+          <h2 class="reason__title reason__title--other">МАЛО ТУРИСТОВ</h2>
+          <p class="reason__number reason__number--other">-№5-</p>
+          <p class="reason__description reason__description--other">
+            Большинство едет в гранд каньон <br> и толпится там
           </p>
         </section>
       </section>
       <section class="find-hotel">
-        <div class="find-hotel__standard-title-description standard-title-description">
-          <h2 class="standard-title-description__title">
+        <div class="find-hotel__text-and-button">
+          <h2 class="find-hotel__title">
             ЗАИНТЕРЕСОВАЛИСЬ?
           </h2>
-          <p class="standard-title-description__description">
-            Укажите предполагаемые датыпоездки, и мы покажем вам лучшиепредложения гостиниц в седоне
+          <p class="find-hotel__description">
+            Укажите предполагаемые даты <br> поездки, и мы покажем вам лучшие <br> предложения гостиниц в седоне
           </p>
+          <a href="#" class="find-hotel__button button">Найти Гостиницу</a>
         </div>
-        <a href="#" class="find-hotel__button button">Найти Гостиницу</a>
         <a href="#" class="find-hotel__map"></a>
       </section>
     </main>
