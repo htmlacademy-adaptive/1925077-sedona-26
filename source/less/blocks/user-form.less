@@ -3,15 +3,22 @@
   border-top: 1px solid @user-fieldset-border-top;
 }
 
+.user-form__contacts {
+  margin-top: 16px;
+}
+
+.user-form__impressions {
+  margin-top: 8px;
+}
+
 .user-form__fieldset {
   padding: 0;
   margin: 0;
   border: none;
-
 }
 
 .user-form__legend {
-  margin-bottom: 20px;
+  margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
@@ -23,6 +30,14 @@
 .user-form__inputs-wrapper {
   display: flex;
   flex-direction: column;
+}
+
+.user-form__radio-wrapper {
+  margin-top: 18px;
+}
+
+.user-form__checkboxes-wrapper {
+  margin-top: 16px;
 }
 
 .user-form__label-text {
@@ -41,6 +56,7 @@
   border: none;
   padding: 16px;
   background-color: @text-input-background;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
@@ -178,6 +194,7 @@
 }
 
 .user-form__describe-emotions {
+  margin-top: 14px;
   width: 100%;
   height: 150px;
   padding: 16px;
@@ -185,6 +202,9 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  border: none;
+  background-color: @text-input-background;
 
   &::placeholder {
     color: fade(@second-color, 30%);
@@ -192,7 +212,7 @@
 }
 
 .user-form__button {
-  margin-top: 56px;
+  margin-top: 52px;
   width: 100%;
 }
 
@@ -202,5 +222,5 @@
   text-transform: uppercase;
   text-align: right;
   margin-top: 2px;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }

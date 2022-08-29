@@ -96,47 +96,54 @@
     </header>
     <main>
       <div class="intro">
-        <svg class="index-reasons__under-intro-background" width="600" height="57" viewBox="0 0 600 57"
-          xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
-          <use href="#under-intro-background"></use>
-        </svg>
-        <svg class="index-reasons__under-intro-background index-reasons__under-intro-background--right" width="600"
-          height="57" viewBox="0 0 600 57" xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
-          <use href="#under-intro-background"></use>
-        </svg>
+        <div class="intro__picture">
+          <svg class="index-reasons__under-intro-background" width="600" height="57" viewBox="0 0 600 57"
+            xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
+            <use href="#under-intro-background"></use>
+          </svg>
+          <svg class="index-reasons__under-intro-background index-reasons__under-intro-background--right" width="600"
+            height="57" viewBox="0 0 600 57" xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
+            <use href="#under-intro-background"></use>
+          </svg>
+        </div>
+        <section class="standard-title-description intro__text">
+          <div class=" container">
+            <h1 class="standard-title-description__title">
+              Оставьте свой отзыв
+            </h1>
+            <p class="standard-title-description__description">
+              Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
+            </p>
+          </div>
+        </section>
       </div>
-      <section class="standard-title-description">
-        <h1 class="standard-title-description__title">
-          Оставьте свой отзыв
-        </h1>
-        <p class="standard-title-description__description">
-          Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
-        </p>
-      </section>
       <form action="#" class="user-form">
         <div class="user-form__fieldset-wrapper">
           <fieldset class="user-form__fieldset">
             <legend class="user-form__legend">Представьтесь:</legend>
-            <div class="user-form__inputs-wrapper">
+            <div class="user-form__inputs-wrapper container">
               <label class="user-form__label-around-text-input">
                 <div class="user-form__label-text">ИМЯ*:</div>
-                <input class="user-form__text-input" type="text" name="name" id="name" placeholder="Пётр">
+                <input class="user-form__text-input" type="text" name="name" id="name" value="Пётр"
+                  placeholder="Введите имя" required>
               </label>
               <label class="user-form__label-around-text-input">
                 <div class="user-form__label-text">ФАМИЛИЯ*:</div>
-                <input class="user-form__text-input" type="text" name="name" id="name" placeholder="Пустота">
+                <input class="user-form__text-input" type="text" name="name" id="name" value="Пустота"
+                  placeholder="Введите фамилию" required>
               </label>
               <label class="user-form__label-around-text-input">
-                <div class="user-form__label-text">ОТЧЕСТВО*:</div>
-                <input class="user-form__text-input" type="text" name="name" id="name" placeholder="Викторович">
+                <div class="user-form__label-text">ОТЧЕСТВО:</div>
+                <input class="user-form__text-input" type="text" name="name" id="name" value="Викторович"
+                  placeholder="Введите отчество">
               </label>
             </div>
           </fieldset>
         </div>
-        <div class="user-form__fieldset-wrapper">
+        <div class="user-form__fieldset-wrapper user-form__contacts">
           <fieldset class="user-form__fieldset">
             <legend class="user-form__legend">Контактная информация:</legend>
-            <div class="user-form__inputs-wrapper">
+            <div class="user-form__inputs-wrapper container">
               <label class="user-form__label-around-text-input">
                 <div class="user-form__label-text">Контактный телефон*:</div>
                 <input class="user-form__text-input user-form__text-input--phone-and-email" type="text" name="phone"
@@ -160,17 +167,17 @@
             </div>
           </fieldset>
         </div>
-        <div class="user-form__fieldset-wrapper">
+        <div class="user-form__fieldset-wrapper user-form__impressions">
           <fieldset class="user-form__fieldset">
             <legend class="user-form__legend">ВАше Общее впечатление:</legend>
-            <div class="user-form__inputs-wrapper">
+            <div class="user-form__inputs-wrapper user-form__radio-wrapper container">
               <label class="user-form__label-around-radio-checkbox">
-                <input class="user-form__radio" type="radio" name="radio" value="positive" checked disabled>
+                <input class="user-form__radio" type="radio" name="radio" value="positive" checked>
                 <span class="user-form__custom-radio"></span>
                 <span class="user-form__radio-and-checkbox-descroption">Скорее положительное</span>
               </label>
               <label class="user-form__label-around-radio-checkbox">
-                <input class="user-form__radio" type="radio" name="radio" value="negative" disabled>
+                <input class="user-form__radio" type="radio" name="radio" value="negative">
                 <span class="user-form__custom-radio"></span>
                 <span class="user-form__radio-and-checkbox-descroption">Скорее отрицательное</span>
               </label>
@@ -185,7 +192,7 @@
         <div class="user-form__fieldset-wrapper">
           <fieldset class="user-form__fieldset">
             <legend class="user-form__legend">посещенные достопримечательности:</legend>
-            <div class="user-form__inputs-wrapper">
+            <div class="user-form__inputs-wrapper user-form__checkboxes-wrapper container">
               <label class="user-form__label-around-radio-checkbox">
                 <input class="user-form__checkbox-input" type="checkbox" name="bridge-of-devil" value="bridge-of-devil"
                   checked>
@@ -199,7 +206,7 @@
               </label>
               <label class="user-form__label-around-radio-checkbox">
                 <input class="user-form__checkbox-input" type="checkbox" name="bell-mountain" value="bell-mountain"
-                  checked disabled>
+                  checked>
                 <span class="user-form__custom-checkbox">
                   <svg class="user-form__checkbox-bird" width="22" height="16" viewBox="0 0 22 16"
                     xmlns="http://www.w3.org/2000/svg" fill="#333333">
@@ -209,7 +216,7 @@
                 <span class="user-form__radio-and-checkbox-descroption">Гора-Колокол</span>
               </label>
               <label class="user-form__label-around-radio-checkbox">
-                <input class="user-form__checkbox-input" type="checkbox" name="slide-park" value="slide-park" disabled>
+                <input class="user-form__checkbox-input" type="checkbox" name="slide-park" value="slide-park" checked>
                 <span class="user-form__custom-checkbox">
                   <svg class="user-form__checkbox-bird" width="22" height="16" viewBox="0 0 22 16"
                     xmlns="http://www.w3.org/2000/svg" fill="#333333">
@@ -233,11 +240,13 @@
         </div>
         <div class="user-form__fieldset-wrapper">
           <fieldset class="user-form__fieldset">
-            <legend class="user-form__legend">Опишите свои эмоции:</legend>
-            <textarea class="user-form__describe-emotions" name="describe-emotions" id="describe-emotions" cols="30"
-              rows="10" placeholder="Опишите подробно все свои восторги" rows="4"></textarea>
-            <button class="user-form__button button" type="submit">ОТПРАВИТЬ ОТЗЫВ</button>
-            <p class="user-form__description-about-required-inputs">* — обязательные поля</p>
+            <div class=" container">
+              <legend class="user-form__legend">Опишите свои эмоции:</legend>
+              <textarea class="user-form__describe-emotions" name="describe-emotions" id="describe-emotions" cols="30"
+                rows="10" placeholder="Опишите подробно все свои восторги" rows="4"></textarea>
+              <button class="user-form__button button" type="submit">ОТПРАВИТЬ ОТЗЫВ</button>
+              <p class="user-form__description-about-required-inputs">* — обязательные поля</p>
+            </div>
           </fieldset>
         </div>
       </form>
