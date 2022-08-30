@@ -1,5 +1,6 @@
 .page-header {
   background-color: @main-background;
+  position: relative;
 }
 
 .page-header__nav {
@@ -27,8 +28,10 @@
   background-color: @second-background;
 
   @media (min-width: @tablet-width) {
-    display: flex;
     background-color: @main-background;
+    display: grid;
+    // grid-template-columns: 1fr 1fr 185px 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 
@@ -50,6 +53,12 @@
       background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
     }
   }
+
+  @media (min-width: @tablet-width) {
+    &:nth-child(3) {
+      grid-column: 4/5;
+    }
+  }
 }
 
 .page-header__link-of-nav-menu {
@@ -67,6 +76,7 @@
     color: @second-color;
     font-size: 14px;
     line-height: 21px;
+    padding: 18px 9px 17px;
 
     &--current {
       color: @current-color;
