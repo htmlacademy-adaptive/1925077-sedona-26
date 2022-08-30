@@ -1,3 +1,7 @@
+.index-reasons__reasons {
+  margin-top: 38px;
+}
+
 .index-reasons__for-bacground-image {
   position: relative;
   height: 388px;//389
@@ -25,12 +29,20 @@
 
 .index-reasons__standard-title-description {
   margin-top: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 34px;
+  }
 }
 
 .index-reasons__decor-before-reasons {
   position: relative;
   background-color: @second-background;
   height: 37px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .index-reasons__reason {
@@ -58,6 +70,10 @@
 
 .index-reasons .standard-title-description__description {
   margin-top: 36px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 28px;
+  }
 }
 
 .index-reasons__photo-wrapper {
@@ -70,4 +86,14 @@
   max-width: 100%;
   height: 260px;
   min-height: 100%;
+}
+
+.index-reasons__title {
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
 }
