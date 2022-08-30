@@ -1,5 +1,10 @@
 .index-reasons__reasons {
   margin-top: 38px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .index-reasons__for-bacground-image {
@@ -48,6 +53,10 @@
 .index-reasons__reason {
   &:first-child {
     padding-top: 32px;
+
+    @media (min-width: @tablet-width) {
+      grid-column: 1/2;
+    }
   }
 
   &--second.reason {
@@ -79,6 +88,10 @@
 .index-reasons__photo-wrapper {
   display: flex;
   justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 2/4;
+  }
 }
 
 .index-reasons__photo {
@@ -86,6 +99,10 @@
   max-width: 100%;
   height: 260px;
   min-height: 100%;
+
+  @media (min-width: @tablet-width) {
+    height: 256px;
+  }
 }
 
 .index-reasons__title {

@@ -6,7 +6,6 @@
   color: @third-color;
   text-transform: uppercase;
 
-
   &--other {
     background-color: @third-background;
     padding-top: 26px;
@@ -14,13 +13,25 @@
   }
 
   &--other:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    left: 18px;
-    right: 18px;
-    bottom: 0;
-    height: 1px;
-    background-color: @other-reason-border;
+    @media (max-width: (@tablet-width - 1)) {
+      content: "";
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 0;
+      height: 1px;
+      background-color: @other-reason-border;
+    }
+  }
+
+  &:nth-child(1) {
+    @media (min-width: @tablet-width) {
+      padding: 40px 32px 10px;
+    }
+
+    .reason__description {
+      margin-top: 26px;
+    }
   }
 }
 
@@ -29,6 +40,10 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
 
   &--other {
     color: @second-color;
