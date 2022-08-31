@@ -6,6 +6,10 @@
   color: @third-color;
   text-transform: uppercase;
 
+  // @media (min-width: @tablet-width) {
+  //   padding: 40px 32px 10px;
+  // }
+
   &--other {
     background-color: @third-background;
     padding-top: 26px;
@@ -24,17 +28,17 @@
     }
   }
 
-  &:nth-child(1) {
-    @media (min-width: @tablet-width) {
-      padding: 40px 32px 10px;
-    }
+  // &:first-of-type {
+  //   @media (min-width: @tablet-width) {
+  //     padding: 40px 32px 10px;
+  //   }
 
-    .reason__description {
-      @media (min-width: @tablet-width) {
-        margin-top: 26px;
-      }
+  .reason__description {
+    @media (min-width: @tablet-width) {
+      margin-top: 26px;
     }
   }
+  // }
 }
 
 .reason__title {
