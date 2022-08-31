@@ -3,6 +3,7 @@
 
   @media (min-width: @tablet-width) {
     grid-column: 1/4;
+    padding-bottom: 60px;
   }
 }
 
@@ -41,6 +42,12 @@
     background-repeat: no-repeat;
 
     @media (min-width: @tablet-width) {
+      width: 75px;
+      height: 75px;
+      background-size: 75px 75px;
+      top: 28px;
+      left: 50%;
+      transform: translate(-50%, 0);
     }
   }
 
@@ -52,24 +59,29 @@
 
     &::before {
       background-image: url("../img/icons/first-reasons/icon-house.svg");
-
-      @media (min-width: @tablet-width) {
-        width: 75px;
-        height: 75px;
-        background-size: 75px 75px;
-        top: 28px;
-        left: 50%;
-        transform: translate(-50%, 0);
-      }
     }
   }
 
-  &--food::before {
-    background-image: url("../img/icons/first-reasons/icon-burger.svg");
+  &--food {
+    @media (min-width: @tablet-width) {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    &::before {
+      background-image: url("../img/icons/first-reasons/icon-burger.svg");
+    }
   }
 
-  &--gift::before {
-    background-image: url("../img/icons/first-reasons/icon-gift.svg");
+  &--gift {
+    @media (min-width: @tablet-width) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    &::before {
+      background-image: url("../img/icons/first-reasons/icon-gift.svg");
+    }
   }
 }
 
