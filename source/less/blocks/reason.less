@@ -8,8 +8,11 @@
 
   &--other {
     background-color: @third-background;
-    padding-top: 26px;
-    padding-bottom: 24px;
+    padding: 26px 20px 24px;
+
+    &:nth-child(3) {
+      padding: 26px 16px 24px;
+    }
 
     @media (min-width: @tablet-width) {
       padding: 41px 34px 41px;
