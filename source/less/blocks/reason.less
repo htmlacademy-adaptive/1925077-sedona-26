@@ -6,14 +6,22 @@
   color: @third-color;
   text-transform: uppercase;
 
-  // @media (min-width: @tablet-width) {
-  //   padding: 40px 32px 10px;
-  // }
-
   &--other {
     background-color: @third-background;
     padding-top: 26px;
     padding-bottom: 24px;
+
+    @media (min-width: @tablet-width) {
+      padding: 41px 34px 41px;
+
+      &:nth-child(2) {
+        padding: 41px 54px 41px;
+      }
+
+      &:nth-child(3) {
+        padding: 41px 54px 41px;
+      }
+    }
   }
 
   &--other:not(:last-child)::after {
@@ -28,17 +36,11 @@
     }
   }
 
-  // &:first-of-type {
-  //   @media (min-width: @tablet-width) {
-  //     padding: 40px 32px 10px;
-  //   }
-
   .reason__description {
     @media (min-width: @tablet-width) {
       margin-top: 26px;
     }
   }
-  // }
 }
 
 .reason__title {
