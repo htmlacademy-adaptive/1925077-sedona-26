@@ -1,9 +1,9 @@
-.page-header {
+.header {
   background-color: @main-background;
   position: relative;
 }
 
-.page-header__nav {
+.header__nav {
   display: block;
   position: absolute;
   width: 100%;
@@ -23,7 +23,7 @@
   }
 }
 
-.page-header__menu-list {
+.header__menu-list {
   .list-reset();
   background-color: @second-background;
 
@@ -35,7 +35,7 @@
   }
 }
 
-.page-header__menu-item {
+.header__menu-item {
   position: relative;
   display: flex;
 
@@ -61,7 +61,7 @@
   }
 }
 
-.page-header__link-of-nav-menu {
+.header__link-of-nav-menu {
   .link-reset();
   padding: 17px 0 12px;
   width: 100%;
@@ -84,7 +84,7 @@
   }
 }
 
-.page-header__link-and-button-wrapper {
+.header__link-and-button-wrapper {
   position: relative;
   height: 56px;
   display: flex;
@@ -92,15 +92,15 @@
   background-color: @main-background;
 }
 
-.page-header__link-logo {
+.header__link-logo {
   z-index: 1;
 }
 
-.page-header__logo {
+.header__logo {
   display: block;
 }
 
-.page-header__menu-toggler {
+.header__menu-toggler {
   @media (min-width: @tablet-width) {
     display: none;
   }
