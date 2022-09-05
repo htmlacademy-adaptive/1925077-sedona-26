@@ -4,12 +4,6 @@
   @media (max-width: (@tablet-width - 1)) {
     border-top: 1px solid @user-fieldset-border-top;
   }
-
-  // &--tablet {
-  //   @media (min-width: @tablet-width) {
-
-  //   }
-  // }
 }
 
 .user-form__user-and-contacts {
@@ -50,6 +44,14 @@
 
   @media (min-width: @tablet-width) {
     margin-top: 16px;
+  }
+}
+
+.user-form__emotions {
+  @media (min-width: @tablet-width) {
+    position: relative;
+    padding-top: 18px;
+    margin-bottom: 42px;
   }
 }
 
@@ -315,11 +317,21 @@
   &::placeholder {
     color: fade(@second-color, 30%);
   }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 24px;
+    height: 160px;
+  }
 }
 
 .user-form__button {
   margin-top: 52px;
   width: 100%;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 42px;
+    width: 50%;
+  }
 }
 
 .user-form__description-about-required-inputs {
@@ -329,4 +341,12 @@
   text-align: right;
   margin: 0;
   margin-top: 2px;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    right: 0;
+    bottom: 38px;
+    font-size: 14px;
+    line-height: 21px;
+  }
 }
