@@ -4,6 +4,12 @@
   @media (max-width: (@tablet-width - 1)) {
     border-top: 1px solid @user-fieldset-border-top;
   }
+
+  // &--tablet {
+  //   @media (min-width: @tablet-width) {
+
+  //   }
+  // }
 }
 
 .user-form__user-and-contacts {
@@ -41,12 +47,34 @@
 
 .user-form__impressions {
   margin-top: 8px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 16px;
+  }
 }
 
 .user-form__fieldset {
   padding: 0;
   margin: 0;
   border: none;
+}
+
+.user-form__legend-tablet-wrapper {
+  @media (min-width: @tablet-width) {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: 1px;
+      width: 100%;
+      top: 50%;
+      background-color: @user-and-contacts-separate;
+      z-index: -1;
+    }
+  }
 }
 
 .user-form__legend {
@@ -60,6 +88,11 @@
 
   @media (min-width: @tablet-width) {
     font-size: 21px;
+
+    &--tablet {
+      width: 402px;
+      background-color: @main-background;
+    }
   }
 }
 
@@ -74,10 +107,33 @@
 
 .user-form__radio-wrapper {
   margin-top: 18px;
+
+  @media (min-width: @tablet-width) {
+    column-gap: 16px;
+    padding-left: 36px;
+    padding-right: 36px;
+  }
 }
 
 .user-form__checkboxes-wrapper {
   margin-top: 16px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 18px;
+    column-gap: 32px;
+    padding-left: 84px;
+    padding-right: 84px;
+  }
+}
+
+.user-form__radio-wrapper,
+.user-form__checkboxes-wrapper {
+  @media (min-width: @tablet-width) {
+    padding-top: 6px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 16px;
+  }
 }
 
 .user-form__label-text {
@@ -142,7 +198,9 @@
   cursor: pointer;
 
   &:not(:first-child) {
-    margin-top: 16px;
+    @media (max-width: (@tablet-width - 1)) {
+      margin-top: 16px;
+    }
   }
 
   display: flex;
@@ -169,6 +227,10 @@
 
   .user-form__radio:checked:disabled + .user-form__custom-radio::before {
     background-color: fade(@main-color, 30%);
+  }
+
+  @media (min-width: @tablet-width) {
+
   }
 }
 
