@@ -20,4 +20,22 @@
 
 .intro__photo-and-video-text {
   margin-top: 18px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 45px;
+  }
+}
+
+.intro__photo-and-video-description {
+  @media (max-width: (@tablet-width - 1)) {
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 32px;
+    padding: 0 95px;
+    margin-bottom: 70px;
+  }
 }

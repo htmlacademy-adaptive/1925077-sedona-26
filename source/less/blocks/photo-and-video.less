@@ -4,12 +4,21 @@
 
 .photo-and-video__wrapper-around-photos {
   margin-top: 25px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .photo-and-video__photo-section {
   padding-top: 24px;
   padding-bottom: 31px;
   border-top: 1px solid @user-fieldset-border-top;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    padding: 0;
+  }
 }
 
 .photo-and-video__photo {
@@ -56,6 +65,10 @@
 .photo-and-video__video-section {
   border-top: 1px solid @user-fieldset-border-top;
   padding-bottom: 26px;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
 }
 
 .photo-and-video__description {
