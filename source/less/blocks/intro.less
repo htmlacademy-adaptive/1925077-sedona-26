@@ -7,14 +7,26 @@
   background-position-x: center;
   background-position-y: -56px;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/intro/intro-mob@2x.jpg");
+  }
+
   @media (min-width: @tablet-width) {
     height: 290px;
     background-image: url("../img/intro/intro-tab.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/intro/intro-tab@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
     background-image: url("../img/intro/desk.jpg");
     height: 301px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/intro/desk@2x.jpg");
+    }
   }
 }
 
