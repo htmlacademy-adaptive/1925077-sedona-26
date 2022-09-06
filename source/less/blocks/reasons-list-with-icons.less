@@ -1,0 +1,110 @@
+.reasons-list-with-icons {
+  padding: 32px 0 52px;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 1/4;
+    padding-bottom: 60px;
+  }
+}
+
+.reasons-list-with-icons__list {
+  .list-reset();
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.reasons-list-with-icons__item {
+  position: relative;
+  padding-left: 44px;
+
+  @media (min-width: @tablet-width) {
+    text-align: center;
+    padding-top: 130px;
+  }
+
+  &:not(:first-child) {
+    @media (max-width: (@tablet-width - 1)) {
+      margin-top: 30px;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      width: 75px;
+      height: 75px;
+      background-size: 75px 75px;
+      top: 28px;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+  }
+
+  &--house {
+    @media (min-width: @tablet-width) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    &::before {
+      background-image: url("../img/icons/first-reasons/icon-house.svg");
+    }
+  }
+
+  &--food {
+    @media (min-width: @tablet-width) {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    &::before {
+      background-image: url("../img/icons/first-reasons/icon-burger.svg");
+    }
+  }
+
+  &--gift {
+    @media (min-width: @tablet-width) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    &::before {
+      background-image: url("../img/icons/first-reasons/icon-gift.svg");
+    }
+  }
+}
+
+.reasons-list-with-icons__title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: @second-color;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    line-height: 26px;
+  }
+}
+
+.reasons-list-with-icons__description {
+  margin: 0;
+  margin-top: 16px;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 20px;
+  }
+}

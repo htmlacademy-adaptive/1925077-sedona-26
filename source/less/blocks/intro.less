@@ -1,0 +1,41 @@
+.intro__picture {
+  position: relative;
+  height: 158px;
+  background-image: url("../img/intro/intro-mob.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 214px contain;
+  background-position-x: center;
+  background-position-y: -56px;
+
+  @media (min-width: @tablet-width) {
+    height: 290px;
+    background-image: url("../img/intro/intro-tab.jpg");
+  }
+}
+
+.intro__text {
+  margin-top: 22px;
+  margin-bottom: 10px;
+}
+
+.intro__photo-and-video-text {
+  margin-top: 18px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 45px;
+  }
+}
+
+.intro__photo-and-video-description {
+  @media (max-width: (@tablet-width - 1)) {
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 32px;
+    padding: 0 95px;
+    margin-bottom: 70px;
+  }
+}

@@ -1,0 +1,80 @@
+.reason {
+  position: relative;
+  padding: 38px 0 36px;
+  background-color: @second-background;
+  text-align: center;
+  color: @third-color;
+  text-transform: uppercase;
+
+  &--other {
+    background-color: @third-background;
+    padding: 26px 20px 24px;
+
+    &:nth-child(3) {
+      padding: 26px 16px 24px;
+    }
+
+    @media (min-width: @tablet-width) {
+      padding: 41px 34px 41px;
+
+      &:nth-child(2) {
+        padding: 41px 54px 41px;
+      }
+
+      &:nth-child(3) {
+        padding: 41px 54px 41px;
+      }
+    }
+  }
+
+  &--other:not(:last-child)::after {
+    @media (max-width: (@tablet-width - 1)) {
+      content: "";
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 0;
+      height: 1px;
+      background-color: @other-reason-border;
+    }
+  }
+
+  .reason__description {
+    @media (min-width: @tablet-width) {
+      margin-top: 26px;
+    }
+  }
+}
+
+.reason__title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
+
+  &--other {
+    color: @second-color;
+  }
+}
+
+.reason__number {
+  margin: 0;
+  margin-top: 12px;
+
+  &--other {
+    color: @second-color;
+  }
+}
+
+.reason__description {
+  margin: 0;
+  margin-top: 16px;
+
+  &--other {
+    color: @second-color;
+  }
+}
