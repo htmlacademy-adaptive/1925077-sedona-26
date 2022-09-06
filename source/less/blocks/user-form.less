@@ -25,6 +25,14 @@
       background-color: @user-and-contacts-separate;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 20px;
+
+    .user-form__legend {
+      margin-left: 6px;
+    }
+  }
 }
 
 .user-form__contacts {
@@ -35,6 +43,12 @@
   @media (min-width: @tablet-width) {
     & .user-form__label-around-text-input {
       margin-left: auto;
+    }
+  }
+
+  .user-form__label-around-text-input {
+    @media (min-width: @desktop-width) {
+      width: 402px;
     }
   }
 }
@@ -157,6 +171,10 @@
 
   @media (min-width: @tablet-width) {
     width: 280px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 430px;
   }
 }
 
