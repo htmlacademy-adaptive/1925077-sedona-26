@@ -74,6 +74,10 @@
 
 .user-form__attractions {
   padding-top: 25px;
+
+  @media (min-width: @desktop-width) {
+    margin-top: 26px;
+  }
 }
 
 .user-form__emotions {
@@ -81,6 +85,10 @@
     position: relative;
     padding-top: 18px;
     margin-bottom: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 46px;
   }
 }
 
@@ -104,6 +112,10 @@
       top: 50%;
       background-color: @user-and-contacts-separate;
       z-index: -1;
+
+      @media (min-width: @desktop-width) {
+        top: 42%;
+      }
     }
   }
 }
@@ -173,6 +185,16 @@
     margin-top: 18px;
     padding-left: 84px;
     padding-right: 84px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 44px;
+    padding-right: 44px;
+    margin-top: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 
@@ -339,6 +361,14 @@
   transform: translate(-50%, -50%);
 }
 
+.user-form__textarea-and-button {
+  @media (min-width: @desktop-width) {
+    position: relative;
+    width: 768px;
+    margin: 0 auto;
+  }
+}
+
 .user-form__describe-emotions {
   margin-top: 14px;
   width: 100%;
@@ -386,5 +416,9 @@
     bottom: 38px;
     font-size: 14px;
     line-height: 21px;
+  }
+
+  @media (min-width: @desktop-width) {
+    bottom: 14px;
   }
 }
