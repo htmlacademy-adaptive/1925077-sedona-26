@@ -143,6 +143,10 @@
     margin-top: 46px;
     padding-bottom: 40px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 86px;
+  }
 }
 
 .photo-and-video__video-description {
@@ -155,6 +159,10 @@
     br {
       display: none;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 370px;
   }
 }
 
@@ -189,6 +197,17 @@
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/page-catalog/video/video-desktop\ 1@2x.jpg");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 800px;
+    height: 500px;
+
+    background-image: url("../img/page-catalog/video/video-desktop.jpg.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/page-catalog/video-desktop.jpg@2x.jpg");
     }
   }
 }
