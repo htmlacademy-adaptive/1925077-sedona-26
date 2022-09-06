@@ -127,8 +127,19 @@
         <div class="photo-and-video__wrapper-around-photos">
           <section class="photo-and-video__photo-section">
             <div class="container">
-              <img class="photo-and-video__photo" src="img/page-catalog/photos/road/photo-1-mobile.jpg.jpg" width="280"
-                height="280" alt="Пустая асфальтированная дорога, начинающийся закат, желтые тона.">
+              <picture>
+                <!-- <source type="image/webp" media="(min-width: 1150px)" srcset="img/products/big-joy-basket/desktop.webp 1x, img/products/big-joy-basket/desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/products/big-joy-basket/tablet.webp 1x, img/products/big-joy-basket/tablet@2x.jpg 2x">
+                <source type="image/webp" srcset="img/products/big-joy-basket/mobile.webp 1x, img/products/big-joy-basket/mobile@2x.webp 2x"> -->
+
+                <source media="(min-width: 1200px)" srcset="img/page-catalog/photos/ 1x, img/page-catalog/photos/ 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/page-catalog/photos/road/photo-1-tablet1.jpg 1x, img/page-catalog/photos/road/photo-1-tablet1@2x.jpg 2x">
+                <source
+                  srcset="img/page-catalog/photos/road/photo-1-mobile.jpg.jpg 1x, img/page-catalog/photos/road/photo-1-mobile.jpg@2x.jpg 2x">
+                <img class="photo-and-video__photo" src="img/page-catalog/photos/road/photo-1-mobile.jpg.jpg"
+                  width="280" height="280" alt="Пустая асфальтированная дорога, начинающийся закат, желтые тона.">
+              </picture>
               <div class="photo-and-video__name-and-author">
                 <p class="photo-and-video__photo-name">неродные просторы</p>
                 <p class="photo-and-video__photo-author">Автор фото: <span
