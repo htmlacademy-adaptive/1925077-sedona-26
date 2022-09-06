@@ -96,6 +96,12 @@
   border-top: 1px solid @user-fieldset-border-top;
   padding-bottom: 26px;
 
+  &:last-child {
+    @media (max-width: (@tablet-width - 1)) {
+      padding-bottom: 0;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     border: none;
     margin-top: 46px;
@@ -127,10 +133,17 @@
 
 .photo-and-video__video {
   background-image: url("../img/page-catalog/video/video-mobile.jpg.jpg");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/page-catalog/video/video-mobile.jpg@2x.jpg");
+  }
   display: block;
-  width: 280px;
-  height: 177px;
+  min-height: 177px;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
   background-repeat: no-repeat;
+  background-size: cover;
   margin: 0 auto 0;
 
   @media (min-width: @tablet-width) {
