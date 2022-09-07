@@ -93,8 +93,11 @@
       </nav>
       <div class="header__link-and-button-wrapper">
         <a class="header__link-logo" href="index.html">
-          <img class="header__logo" src="./img/logos/logo-mobile.png" alt="На главную страницу." width="185"
-            height="96">
+          <picture>
+            <source srcset="./img/logos/logo-mobile.png 1x, ./img/logos/logo-mobile@2x.png 2x">
+            <img class="header__logo" src="./img/logos/logo-mobile.png" alt="На главную страницу." width="185"
+              height="96">
+          </picture>
         </a>
         <!-- классы для отображения кнопки: бургер или крестик
             header__menu-toggler--to-open
