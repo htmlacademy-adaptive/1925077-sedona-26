@@ -89,7 +89,9 @@
       padding: 43px 32px 10px;
 
       .reason__title {
-        padding: 0 21px 0;
+        @media (max-width: (@desktop-width - 1)) {
+          padding: 0 21px 0;
+        }
       }
 
       & ~ .index-reasons__photo-wrapper {
@@ -97,11 +99,11 @@
         order: -1;
       }
     }
-  }
-}
 
-.index-reasons__city-title {
-  padding: 0 50px;
+    @media (min-width: @desktop-width) {
+      padding: 51px 85px 10px;
+    }
+  }
 }
 
 .index-reasons__second-reason {
@@ -145,10 +147,11 @@
   object-fit: cover;
   width: 100%;
   min-height: 260px;
+  display: block;
 
   @media (min-width: @tablet-width) {
     min-height: auto;
-    max-height: 256px;
+    height: 256px;
   }
 }
 
