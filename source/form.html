@@ -83,8 +83,11 @@
       </nav>
       <div class="header__link-and-button-wrapper">
         <a class="header__link-logo" href="index.html">
-          <img class="header__logo" src="./img/logos/logo-mobile.png" alt="На главную страницу." width="185"
-            height="96">
+          <picture>
+            <source srcset="./img/logos/logo-mobile.png 1x, ./img/logos/logo-mobile@2x.png 2x">
+            <img class="header__logo" src="./img/logos/logo-mobile.png" alt="На главную страницу." width="185"
+              height="96">
+          </picture>
         </a>
         <!-- классы для отображения кнопки: бургер или крестик
             header__menu-toggler--to-open
@@ -117,7 +120,7 @@
           </div>
         </section>
       </div>
-      <form action="#" class="user-form container-tablet">
+      <form action="#" class="user-form container-tablet container-desktop">
         <div class="user-form__user-and-contacts">
           <div class="user-form__fieldset-wrapper">
             <fieldset class="user-form__fieldset">
@@ -250,16 +253,18 @@
               <div class="user-form__legend-tablet-wrapper">
                 <legend class="user-form__legend user-form__legend--tablet">Опишите свои эмоции:</legend>
               </div>
-              <textarea class="user-form__describe-emotions" name="describe-emotions" id="describe-emotions" cols="30"
-                rows="10" placeholder="Опишите подробно все свои восторги" rows="4"></textarea>
-              <button class="user-form__button button" type="submit">ОТПРАВИТЬ ОТЗЫВ</button>
-              <p class="user-form__description-about-required-inputs">* — обязательные поля</p>
+              <div class="user-form__textarea-and-button">
+                <textarea class="user-form__describe-emotions" name="describe-emotions" id="describe-emotions" cols="30"
+                  rows="10" placeholder="Опишите подробно все свои восторги" rows="4"></textarea>
+                <button class="user-form__button button" type="submit">ОТПРАВИТЬ ОТЗЫВ</button>
+                <p class="user-form__description-about-required-inputs">* — обязательные поля</p>
+              </div>
             </div>
           </fieldset>
         </div>
       </form>
     </main>
-    <footer class="page-footer">
+    <footer class="page-footer container-tablet container-desktop">
       <a class="page-footer__title" href="https://twitter.com/hashtag/visitsedona">#visitSEDONA</a>
       <ul class="page-footer__social-links-list">
         <li class="page-footer__social-item">

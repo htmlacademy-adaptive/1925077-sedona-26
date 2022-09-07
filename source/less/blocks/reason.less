@@ -25,6 +25,20 @@
         padding: 41px 54px 41px;
       }
     }
+
+    &:nth-child(2) {
+      @media (min-width: @desktop-width) {
+        .reason__description--other {
+          width: 270px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-bottom: 62px;
+    }
   }
 
   &--other:not(:last-child)::after {
@@ -58,6 +72,11 @@
 
   &--other {
     color: @second-color;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 150px;
+    margin: 0 auto;
   }
 }
 
