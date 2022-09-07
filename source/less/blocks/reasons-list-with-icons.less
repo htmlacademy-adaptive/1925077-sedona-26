@@ -5,6 +5,10 @@
     grid-column: 1/4;
     padding-bottom: 60px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 80px;
+  }
 }
 
 .reasons-list-with-icons__list {
@@ -60,6 +64,11 @@
     &::before {
       background-image: url("../img/icons/first-reasons/icon-house.svg");
     }
+
+    @media (min-width: @desktop-width) {
+      padding-left: 55px;
+      padding-right: 55px;
+    }
   }
 
   &--food {
@@ -71,9 +80,18 @@
     &::before {
       background-image: url("../img/icons/first-reasons/icon-burger.svg");
     }
+
+    @media (min-width: @desktop-width) {
+      padding-left: 55px;
+      padding-right: 55px;
+    }
   }
 
   &--gift {
+    br {
+      display: none;
+    }
+
     @media (min-width: @tablet-width) {
       padding-left: 30px;
       padding-right: 30px;
@@ -81,6 +99,15 @@
 
     &::before {
       background-image: url("../img/icons/first-reasons/icon-gift.svg");
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-left: 55px;
+      padding-right: 55px;
+
+      br {
+        display: block;
+      }
     }
   }
 }

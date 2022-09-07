@@ -4,19 +4,27 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 28px;
+  }
 }
 
 .index-reasons__for-bacground-image {
   position: relative;
-  height: 388px;//389
+  height: 388px;
   background-image: url("../img/page-index/index-intro/index-intro-mob.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/page-index/index-intro/index-intro-mob@2x.jpg");
+  }
+
   @media (min-width: @tablet-width) {
     height: 518px;
-    background-image: url("../img/page-index/index-intro/index-intro-tablet.jpg");
+    background-image: url("../img/page-index/index-intro/index-intro-tablet@2x.jpg");
   }
 }
 
@@ -36,6 +44,13 @@
 
   @media (min-width: @tablet-width) {
     margin-top: 34px;
+    width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 45px;
   }
 }
 
@@ -43,6 +58,7 @@
   position: relative;
   background-color: @second-background;
   height: 37px;
+  margin-top: -2px;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -52,10 +68,15 @@
 .index-reasons__reason {
   &:first-child {
     padding-top: 32px;
+    padding-bottom: 41px;
 
     @media (min-width: @tablet-width) {
       grid-column: 1/2;
       padding: 40px 32px 10px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 47px 59px 10px;
     }
   }
 
@@ -77,6 +98,10 @@
       }
     }
   }
+}
+
+.index-reasons__city-title {
+  padding: 0 50px;
 }
 
 .index-reasons__second-reason {
@@ -112,28 +137,24 @@
 
   @media (min-width: @tablet-width) {
     grid-column: 2/4;
+    height: 256px;
   }
 }
 
 .index-reasons__photo {
   object-fit: cover;
-  max-width: 100%;
-  height: 260px;
-  min-height: 100%;
+  width: 100%;
+  min-height: 260px;
 
   @media (min-width: @tablet-width) {
-    height: 256px;
+    min-height: auto;
+    max-height: 256px;
   }
 }
 
 .index-reasons__title {
   padding-left: 10px;
   padding-right: 10px;
-
-  @media (min-width: @tablet-width) {
-    padding-left: 150px;
-    padding-right: 150px;
-  }
 }
 
 .index-reasons__title.standard-title-description__title {

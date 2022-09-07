@@ -138,7 +138,7 @@
 
           <div class="index-reasons__reason reason">
             <div class=" container--index-page">
-              <h2 class="reason__title">Настоящий городок</h2>
+              <h2 class="index-reasons__city-title reason__title">Настоящий городок</h2>
               <p class="reason__number">— №1 —</p>
               <p class="reason__description">
                 СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ
@@ -147,8 +147,14 @@
           </div>
 
           <div class="index-reasons__photo-wrapper">
-            <img class="index-reasons__photo" src="img/page-index/reasons/city/photo-city-mob.jpg"
-              alt="Фото здания в стиле дикого запада.">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/page-index/reasons/city/photo-city@1x.jpg 1x, img/page-index/reasons/city/photo-city@1x@2x.jpg 2x">
+              <source
+                srcset="img/page-index/reasons/city/photo-city-mob.jpg 1x, img/page-index/reasons/city/photo-city-mob@2x.jpg 2x">
+              <img class="index-reasons__photo" src="img/page-index/reasons/city/photo-city-mob.jpg"
+                alt="Фото здания в стиле дикого запада.">
+            </picture>
           </div>
 
           <div class="reasons-list-with-icons">
@@ -172,7 +178,7 @@
                 <li class="reasons-list-with-icons__item reasons-list-with-icons__item--gift">
                   <!-- <div> -->
                   <h3 class="reasons-list-with-icons__title">СУВЕНИРЫ</h3>
-                  <p class="reasons-list-with-icons__description">Не только китайского, но и местного производства!
+                  <p class="reasons-list-with-icons__description">Не только китайского, <br> но и местного производства!
                   </p>
                   <!-- </div> -->
                 </li>
@@ -194,8 +200,14 @@
           </div>
 
           <div class="index-reasons__photo-wrapper">
-            <img class="index-reasons__photo" src="img/page-index/reasons/satan-bridge/photo-bridge-mob.jpg"
-              alt="Скала с дырой, которая выглядит как мост.">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/page-index/reasons/satan-bridge/photo-bridge@1x.jpg 1x, img/page-index/reasons/satan-bridge/photo-bridge@1x@2x.jpg 2x">
+              <source
+                srcset="img/page-index/reasons/satan-bridge/photo-bridge-mob.jpg 1x, img/page-index/reasons/satan-bridge/photo-bridge-mob@2x.jpg 2x">
+              <img class="index-reasons__photo" src="img/page-index/reasons/satan-bridge/photo-bridge-mob.jpg"
+                alt="Скала с дырой, которая выглядит как мост.">
+            </picture>
           </div>
         </section>
         <div class="index-reasons__other-reasons">
@@ -241,7 +253,7 @@
         <a href="#" class="find-hotel__map"></a>
       </section>
     </main>
-    <footer class="page-footer ">
+    <footer class="page-footer container-tablet container-desktop">
       <a class="page-footer__title" href="https://twitter.com/hashtag/visitsedona">#visitSEDONA</a>
       <ul class="page-footer__social-links-list">
         <li class="page-footer__social-item">
