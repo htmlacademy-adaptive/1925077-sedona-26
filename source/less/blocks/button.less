@@ -12,7 +12,16 @@
   text-transform: uppercase;
   font-family: "PT Sans", "Arial", sans-serif;
 
-  &:visited {
-    color: @third-color;
+  &:hover {
+    background-color: @second-background-hover;
+  }
+
+  &:active {
+    background-color: @second-background-active;
+    color: @third-color-active;
+  }
+
+  &:disabled {
+    background-color: @disabled-backround;
   }
 }
