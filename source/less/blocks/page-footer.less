@@ -45,6 +45,19 @@
   width: 48px;
   height: 48px;
   background-color: @second-background;
+
+  &:hover {
+    background-color: @second-background-hover;
+  }
+
+  &:active {
+    background-color: @second-background-active;
+    color: @third-color-active;
+  }
+
+  &:active .page-footer__social-icon {
+    fill: @third-color-active;
+  }
 }
 
 .page-footer__social-icon {
