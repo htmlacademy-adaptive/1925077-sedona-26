@@ -75,18 +75,16 @@
          -->
       <nav class="header__nav ">
         <ul class="header__menu-list">
-          <li class="header__menu-item"><a
-              class="header__link-of-nav-menu container--index-page header__link-of-nav-menu--current"
+          <li class="header__menu-item"><a class="header__link-of-nav-menu header__link-of-nav-menu--current"
               href="index.html">Главная</a></li>
-          <li class="header__menu-item"><a class="header__link-of-nav-menu container--index-page"
-              href="catalog.html">Фото
+          <li class="header__menu-item"><a class="header__link-of-nav-menu" href="catalog.html">Фото
               и
               видео</a>
           </li>
-          <li class="header__menu-item"><a class="header__link-of-nav-menu container--index-page" href="form.html">Форма
+          <li class="header__menu-item"><a class="header__link-of-nav-menu" href="form.html">Форма
               отзыва</a>
           </li>
-          <li class="header__menu-item"><a class="header__link-of-nav-menu container--index-page" href="#">Html
+          <li class="header__menu-item"><a class="header__link-of-nav-menu" href="https://htmlacademy.ru/">Html
               Academy</a>
           </li>
         </ul>
@@ -256,14 +254,20 @@
           </p>
           <a href="#" class="find-hotel__button button">Найти Гостиницу</a>
         </div>
-        <a href="#" class="find-hotel__map"></a>
+
+        <iframe class="find-hotel__map"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3357151.538399074!2d-111.54640117987357!3d34.74379440061645!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1662583952577!5m2!1sru!2sru"
+          width="600" height="450" allowfullscreen="" loading="lazy" title="Седона на картах гугл-мэп."
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
       </section>
     </main>
+
     <footer class="page-footer container-tablet container-desktop">
       <a class="page-footer__title" href="https://twitter.com/hashtag/visitsedona">#visitSEDONA</a>
+
       <ul class="page-footer__social-links-list">
         <li class="page-footer__social-item">
-          <a href="#" class="page-footer__social-link page-footer__social-link--vk">
+          <a class="page-footer__social-link page-footer__social-link--vk" href="https://vk.com/htmlacademy">
             <svg class="page-footer__social-icon" width="24" height="24" viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg" fill="white">
               <use href="#vk-icon-for-footer"></use>
@@ -272,7 +276,7 @@
           </a>
         </li>
         <li class="page-footer__social-item">
-          <a href="#" class="page-footer__social-link page-footer__social-link--tg">
+          <a class="page-footer__social-link page-footer__social-link--tg" href="tg://resolve?domain=htmlacademy">
             <svg class="page-footer__social-icon" width="24" height="24" viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg" fill="white">
               <use href="#tg-icon-for-footer"></use>
@@ -281,7 +285,8 @@
           </a>
         </li>
         <li class="page-footer__social-item">
-          <a href="#" class="page-footer__social-link page-footer__social-link--yt">
+          <a class="page-footer__social-link page-footer__social-link--yt"
+            href="https://www.youtube.com/user/htmlacademyru">
             <svg class="page-footer__social-icon" width="24" height="24" viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg" fill="white">
               <use href="#yt-icon-for-footer"></use>
@@ -290,13 +295,15 @@
           </a>
         </li>
       </ul>
-      <a class="page-footer__copyright">
+
+      <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="page-footer__copyright-text">Разработано</span>
         <svg class="page-footer__copyright-logo" width="27" height="35" fill="#000">
           <use href="#academy-icon"></use>
         </svg>
       </a>
     </footer>
+
   </div>
   <script src="js/main.js"></script>
 </body>

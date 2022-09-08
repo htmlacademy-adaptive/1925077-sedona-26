@@ -11,8 +11,20 @@
   line-height: 26px;
   text-transform: uppercase;
   font-family: "PT Sans", "Arial", sans-serif;
+  cursor: pointer;
 
-  &:visited {
+  &:hover {
+    background-color: @second-background-hover;
+  }
+
+  &:active {
+    background-color: @second-background-active;
+    color: @third-color-active;
+  }
+
+  &:disabled,
+  &:disabled:active {
     color: @third-color;
+    background-color: @disabled-backround;
   }
 }
