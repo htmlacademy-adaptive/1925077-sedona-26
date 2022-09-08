@@ -293,6 +293,11 @@
     background-color: @text-input-background-hover;
   }
 
+  &:focus-within .user-form__custom-radio,
+  &:focus-within .user-form__custom-checkbox {
+    outline: 2px solid @current-color;
+    outline-offset: 2px;
+  }
 
   &:active .user-form__custom-checkbox,
   &:active .user-form__custom-radio {
@@ -345,6 +350,11 @@
     transform: translate(-50%, -50%);
     background-color: @main-color;
   }
+
+  // &:focus + .user-form__custom-radio {
+  //   outline: 2px solid @current-color;
+  //   outline-offset: -2px;
+  // }
 }
 
 .user-form__custom-checkbox,
