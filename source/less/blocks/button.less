@@ -11,6 +11,7 @@
   line-height: 26px;
   text-transform: uppercase;
   font-family: "PT Sans", "Arial", sans-serif;
+  cursor: pointer;
 
   &:hover {
     background-color: @second-background-hover;
@@ -21,7 +22,9 @@
     color: @third-color-active;
   }
 
-  &:disabled {
+  &:disabled,
+  &:disabled:active {
+    color: @third-color;
     background-color: @disabled-backround;
   }
 }
