@@ -310,6 +310,12 @@
     }
   }
 
+  &:active .user-form__checkbox-input {
+    &:checked ~ .user-form__custom-checkbox .user-form__checkbox-bird {
+      opacity: 0.3;
+    }
+  }
+
   .user-form__checkbox-input:disabled + .user-form__custom-checkbox,
   .user-form__radio:disabled + .user-form__custom-radio {
     background-color: fade(@text-input-background, 30%);
@@ -350,11 +356,6 @@
     transform: translate(-50%, -50%);
     background-color: @main-color;
   }
-
-  // &:focus + .user-form__custom-radio {
-  //   outline: 2px solid @current-color;
-  //   outline-offset: -2px;
-  // }
 }
 
 .user-form__custom-checkbox,
@@ -373,10 +374,6 @@
 .user-form__checkbox-input {
   &:checked + * .user-form__checkbox-bird {
     fill: @main-color;
-  }
-
-  &:checked:active + * .user-form__checkbox-bird {
-    fill: rgba(51, 51, 51, 0.3);
   }
 }
 
