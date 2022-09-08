@@ -75,6 +75,24 @@
   align-items: center;
   text-decoration: none;
 
+  &:hover .page-footer__copyright-text {
+    color: @menu-hover-color;
+  }
+
+  &:active .page-footer__copyright-text {
+    color: #000000;
+    opacity: 0.3;
+  }
+
+  &:hover .page-footer__copyright-logo {
+    fill: @menu-hover-color;
+  }
+
+  &:active .page-footer__copyright-logo {
+    fill: #000000;
+    opacity: 0.3;
+  }
+
   @media (max-width: (@tablet-width - 1)) {
     margin-top: 40px;
   }
