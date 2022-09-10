@@ -56,6 +56,13 @@
   }
 
   &--house {
+    @media (max-width: (@tablet-width - 1)) {
+      .reasons-list-with-icons__title,
+      .reasons-list-with-icons__description {
+        margin-left: 4px;
+      }
+    }
+
     @media (min-width: @tablet-width) {
       padding-left: 40px;
       padding-right: 40px;
@@ -72,6 +79,13 @@
   }
 
   &--food {
+    @media (max-width: (@tablet-width - 1)) {
+      .reasons-list-with-icons__title,
+      .reasons-list-with-icons__description {
+        margin-left: 8px;
+      }
+    }
+
     @media (min-width: @tablet-width) {
       padding-left: 50px;
       padding-right: 50px;
