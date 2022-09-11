@@ -19,3 +19,158 @@
     margin-top: 32px;
   }
 }
+
+.page-form__modal {
+  width: 100%;
+  height: 100%;
+  background-color: @behind-modal;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.page-form__modal-wrapper {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: @main-background;
+
+  &--wrong {
+    padding: 45px 0 35px;
+
+    @media (min-width: @tablet-width) {
+      padding: 54px 0 49px;
+      width: 400px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 46px;
+    }
+  }
+
+  &--succsess {
+    padding-top: 44px;
+
+    @media (min-width: @tablet-width) {
+      // padding: 54px 0 49px;
+      width: 640px;
+    }
+  }
+}
+
+.page-form__modal-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &--wrong {
+    width: 238px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: @tablet-width) {
+      width: 307px;
+    }
+  }
+}
+
+.page-form__modal-title {
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: @second-color;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+.page-form__modal-wrong-title {
+  width: 250px;
+}
+
+.page-form__modal-description {
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 26px;
+}
+
+.page-form__modal-description-wrong {
+  @media (min-width: @tablet-width) {
+    margin-top: 24px;
+  }
+}
+
+.page-form__modal-button {
+  margin-top: 28px;
+}
+
+.page-form__modal-button-wrapper {
+  background-color: @text-input-background;
+  padding: 20px;
+  margin-top: 46px;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    padding: 44px;
+    margin-top: 48px;
+  }
+}
+
+.page-form__modal-close-button {
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 458px;
+  }
+}
+
+.page-form__modal-ok-button {
+  width: 180px;
+
+  @media (min-width: @tablet-width) {
+    width: 272px;
+    margin-top: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 48px;
+  }
+}
+
+.page-form__modal-wrong {
+  &--none {
+    display: none;
+  }
+}
+
+.page-form__modal-succsess {
+  &--none {
+    display: none;
+  }
+}
+
+.page-form__modal-sucsess-title {
+  width: 244px;
+
+  @media (min-width: @tablet-width) {
+    width: 444px;
+  }
+}
+
+.page-form__modal-description-sucsess {
+  width: 244px;
+
+  @media (min-width: @tablet-width) {
+    width: 444px;
+  }
+}

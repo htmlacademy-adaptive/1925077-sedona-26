@@ -247,6 +247,10 @@
     background-color: @text-input-background-hover;
   }
 
+  &:focus {
+    outline: 2px solid @current-color;
+  }
+
   &:active {
     background-color: @main-background;
     outline: 4px solid @user-fieldset-border-top;
@@ -289,6 +293,11 @@
     background-color: @text-input-background-hover;
   }
 
+  &:focus-within .user-form__custom-radio,
+  &:focus-within .user-form__custom-checkbox {
+    outline: 2px solid @current-color;
+    outline-offset: 2px;
+  }
 
   &:active .user-form__custom-checkbox,
   &:active .user-form__custom-radio {
@@ -298,6 +307,12 @@
   &:active .user-form__radio {
     &:checked ~ .user-form__custom-radio::before {
       background-color: fade(@main-color, 30%);
+    }
+  }
+
+  &:active .user-form__checkbox-input {
+    &:checked ~ .user-form__custom-checkbox .user-form__checkbox-bird {
+      opacity: 0.3;
     }
   }
 
@@ -360,10 +375,6 @@
   &:checked + * .user-form__checkbox-bird {
     fill: @main-color;
   }
-
-  &:checked:active + * .user-form__checkbox-bird {
-    fill: rgba(51, 51, 51, 0.3);
-  }
 }
 
 .user-form__custom-checkbox {
@@ -414,8 +425,14 @@
     background-color: @text-input-background-hover;
   }
 
+  &:focus {
+    outline: 2px solid @current-color;
+  }
+
   &:active {
     background-color: @main-background;
+    outline: 4px solid @user-fieldset-border-top;
+    outline-offset: -4px;
   }
 }
 

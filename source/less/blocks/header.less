@@ -81,6 +81,11 @@
     color: @third-color-active;
   }
 
+  &:focus {
+    outline: 2px solid @current-color;
+    outline-offset: -2px;
+  }
+
   @media (min-width: @tablet-width) {
     color: @second-color;
     font-size: 14px;
@@ -101,6 +106,10 @@
       color: #000000;
       opacity: 0.3;
     }
+
+    &:focus {
+      outline-offset: -4px;
+    }
   }
 }
 
@@ -114,6 +123,7 @@
 
 .header__link-logo {
   z-index: 1;
+  position: relative;
 
   &:hover {
     opacity: 0.6;
@@ -121,6 +131,38 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-top: 112px solid @current-color;
+    z-index: -1;
+  }
+
+  &:focus::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 0;
+    height: 0;
+    border-left: 97px solid transparent;
+    border-right: 97px solid transparent;
+    border-top: 109px solid @main-background;
+    z-index: -1;
   }
 }
 
