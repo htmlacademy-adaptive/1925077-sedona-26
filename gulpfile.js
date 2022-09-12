@@ -7,10 +7,12 @@ import browser from 'browser-sync';
 import csso from 'postcss-csso';
 import rename from 'gulp-rename';
 import htmlmin from 'gulp-htmlmin';
+import terser from 'gulp-terser';
+import squoosh from 'gulp-libsquoosh';
 
 
 // Styles
-export const styles = () => {
+const styles = () => {
   return gulp.src('source/less/style.less', { sourcemaps: true })
     .pipe(plumber())
     .pipe(less())
@@ -31,11 +33,25 @@ const htmlmini = () => {
     .pipe(gulp.dest('build'));
 }
 
+//JS
+const scripts = () => {
+  return gulp.src('source/js/*.js')
+    .pipe(terser())
+    .pipe(gulp.dest('build/js'));
+}
+
+// Pics
+const images = () => {
+  return gulp.src('source/img/**/*.{jpg,png}')
+    .pipe(squoosh())
+    .pipe(gulp.dest('build/img'));
+}
+
 // Server
 const server = (done) => {
   browser.init({
     server: {
-      baseDir: 'source'//build
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -51,9 +67,41 @@ const watcher = () => {
 }
 
 
-export default gulp.series(
+// Building
+export const build = gulp.series(
+  // clean,
+  // copy,
+  scripts,
+  images,
+  // webper,
+  // svger,
+  // spriter,
   styles,
-  htmlmini,
-  server,
-  watcher
+  htmlmini
+  );
+
+
+  export default gulp.series(
+    styles,
+    htmlmini,
+    scripts,
+    images,
+    server,
+    watcher
 );
+
+
+
+// export default gulp.series(
+//   clean,
+//   copy,
+//   scripts,
+//   images,
+//   webper,
+//   svger,
+//   spriter,
+//   styles,
+//   htmlmini,
+//   server,
+//   watcher
+// );
