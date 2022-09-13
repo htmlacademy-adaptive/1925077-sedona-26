@@ -15,7 +15,7 @@ import spriting from 'gulp-svgstore';
 
 
 // Styles
-const styles = () => {
+export const styles = () => {
   return gulp.src('source/less/style.less', { sourcemaps: true })
     .pipe(plumber())
     .pipe(less())
