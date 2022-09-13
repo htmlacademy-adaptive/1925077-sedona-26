@@ -28,58 +28,58 @@ const styles = () => {
     .pipe(browser.stream());
 }
 
-//HTML
-const htmlmini = () => {
-  return gulp.src('source/*.html')
-    .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('build'));
-}
+// //HTML
+// const htmlmini = () => {
+//   return gulp.src('source/*.html')
+//     .pipe(htmlmin({collapseWhitespace: true}))
+//     .pipe(gulp.dest('build'));
+// }
 
-//JS
-const scripts = () => {
-  return gulp.src('source/js/*.js')
-    .pipe(terser())
-    .pipe(gulp.dest('build/js'));
-}
+// //JS
+// const scripts = () => {
+//   return gulp.src('source/js/*.js')
+//     .pipe(terser())
+//     .pipe(gulp.dest('build/js'));
+// }
 
-// Pics
-const images = () => {
-  return gulp.src('source/img/**/*.{jpg,png}')
-    .pipe(squoosh())
-    .pipe(gulp.dest('build/img'));
-}
+// // Pics
+// const images = () => {
+//   return gulp.src('source/img/**/*.{jpg,png}')
+//     .pipe(squoosh())
+//     .pipe(gulp.dest('build/img'));
+// }
 
-// Webp
-const webper = () => {
-  return gulp.src('source/img/**/*.{jpg,png}')
-    .pipe(squoosh({ webp: {} }))
-    .pipe(gulp.dest('source/img'))
-    .pipe(gulp.dest('build/img'));
-}
+// // Webp
+// const webper = () => {
+//   return gulp.src('source/img/**/*.{jpg,png}')
+//     .pipe(squoosh({ webp: {} }))
+//     .pipe(gulp.dest('source/img'))
+//     .pipe(gulp.dest('build/img'));
+// }
 
-// Copier
-const copy = (done) => {
-  gulp.src([
-    'source/fonts/*.{woff2,woff}',
-    'source/*.ico',
-    'source/*.webmanifest',
-  ], {
-    base: 'source'
-  })
-  .pipe(gulp.dest('build'))
-  done();
-}
+// // Copier
+// const copy = (done) => {
+//   gulp.src([
+//     'source/fonts/*.{woff2,woff}',
+//     'source/*.ico',
+//     'source/*.webmanifest',
+//   ], {
+//     base: 'source'
+//   })
+//   .pipe(gulp.dest('build'))
+//   done();
+// }
 
-//Clean
-const clean = () => {
-  return del('build');
-}
+// //Clean
+// const clean = () => {
+//   return del('build');
+// }
 
 // Server
 const server = (done) => {
   browser.init({
     server: {
-      baseDir: 'build'
+      baseDir: 'source'
     },
     cors: true,
     notify: false,
@@ -96,29 +96,29 @@ const watcher = () => {
 
 
 // Building
-export const build = gulp.series(
-  clean,
-  copy,
-  scripts,
-  images,
-  webper,
-  // svger,
-  // spriter,
-  styles,
-  htmlmini
-  );
+// export const build = gulp.series(
+  // clean,
+  // copy,
+  // scripts,
+  // images,
+  // webper,
+  // // svger,
+  // // spriter,
+  // styles,
+  // htmlmini
+  // );
 
 
 export default gulp.series(
-  clean,
-  copy,
-  scripts,
-  images,
-  webper,
+  // clean,
+  // copy,
+  // scripts,
+  // images,
+  // webper,
   // svger,
   // spriter,
   styles,
-  htmlmini,
+  // htmlmini,
   server,
   watcher
 );
