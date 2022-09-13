@@ -9,6 +9,8 @@ import rename from 'gulp-rename';
 import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
+import del from 'del';
+
 
 
 // Styles
@@ -47,6 +49,32 @@ const images = () => {
     .pipe(gulp.dest('build/img'));
 }
 
+// Webp
+const webper = () => {
+  return gulp.src('source/img/**/*.{jpg,png}')
+    .pipe(squoosh({ webp: {} }))
+    .pipe(gulp.dest('source/img'))
+    .pipe(gulp.dest('build/img'));
+}
+
+// Copier
+const copy = (done) => {
+  gulp.src([
+    'source/fonts/*.{woff2,woff}',
+    'source/*.ico',
+    'source/*.webmanifest',
+  ], {
+    base: 'source'
+  })
+  .pipe(gulp.dest('build'))
+  done();
+}
+
+//Clean
+const clean = () => {
+  return del('build');
+}
+
 // Server
 const server = (done) => {
   browser.init({
@@ -69,11 +97,11 @@ const watcher = () => {
 
 // Building
 export const build = gulp.series(
-  // clean,
-  // copy,
+  clean,
+  copy,
   scripts,
   images,
-  // webper,
+  webper,
   // svger,
   // spriter,
   styles,
@@ -81,27 +109,16 @@ export const build = gulp.series(
   );
 
 
-  export default gulp.series(
-    styles,
-    htmlmini,
-    scripts,
-    images,
-    server,
-    watcher
+export default gulp.series(
+  clean,
+  copy,
+  scripts,
+  images,
+  webper,
+  // svger,
+  // spriter,
+  styles,
+  htmlmini,
+  server,
+  watcher
 );
-
-
-
-// export default gulp.series(
-//   clean,
-//   copy,
-//   scripts,
-//   images,
-//   webper,
-//   svger,
-//   spriter,
-//   styles,
-//   htmlmini,
-//   server,
-//   watcher
-// );
