@@ -132,8 +132,8 @@ export default gulp.series(
   webper,
   svger,
   spriter,
-  styles,
   htmlmini,
+  styles,
   server,
   watcher
 );
