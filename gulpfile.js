@@ -124,7 +124,7 @@ export const build = gulp.series(
   htmlmini
   );
 
-
+  //npm i -g gulp-cli
 export default gulp.series(
   clean,
   copy,
