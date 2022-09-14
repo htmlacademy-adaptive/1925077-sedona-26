@@ -17,9 +17,23 @@
 }
 
 .photo-and-video__photo-section {
+  display: block;
   padding-top: 24px;
   padding-bottom: 31px;
   border-top: 1px solid @user-fieldset-border-top;
+  text-decoration: none;
+
+  &:visited {
+    color: inherit;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: @tablet-width) {
     position: relative;
