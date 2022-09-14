@@ -32,8 +32,8 @@
       <div class="header__link-and-button-wrapper">
         <a class="header__link-logo" href="index.html">
           <picture>
-            <source srcset="./img/logos/logo-mobile.png 1x, ./img/logos/logo-mobile@2x.png 2x">
-            <img class="header__logo" src="./img/logos/logo-mobile.png" alt="На главную страницу." width="185"
+            <source media="(min-width: 320px)" srcset="./img/logos/logo-full.png 1x, ./img/logos/logo-full@2x.png 2x">
+            <img class="header__logo" src="./img/logos/logo-full.png" alt="На главную страницу." width="185"
               height="96">
           </picture>
         </a>
@@ -44,12 +44,12 @@
     <main>
       <div class="intro">
         <div class="intro__picture">
-          <svg class="index-reasons__under-intro-background" width="600" height="57" viewBox="0 0 600 57"
-            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
+          <svg class="intro__under-intro-background" width="600" height="57" viewBox="0 0 600 57" aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
             <use href="img/sprites/sprite.svg#under-intro-background"></use>
           </svg>
-          <svg class="index-reasons__under-intro-background index-reasons__under-intro-background--right" width="600"
-            aria-hidden="true" height="57" viewBox="0 0 600 57" xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
+          <svg class="intro__under-intro-background intro__under-intro-background--right" width="600" aria-hidden="true"
+            height="57" viewBox="0 0 600 57" xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
             <use href="img/sprites/sprite.svg#under-intro-background"></use>
           </svg>
         </div>
@@ -210,7 +210,7 @@
     </main>
 
     <footer class="page-footer container-tablet container-desktop">
-      <div><a class="page-footer__title" href="https://twitter.com/hashtag/visitsedona">#visitSEDONA</a></div>
+      <a class="page-footer__title" href="https://twitter.com/hashtag/visitsedona">#visitSEDONA</a>
 
       <ul class="page-footer__social-links-list">
         <li class="page-footer__social-item">
