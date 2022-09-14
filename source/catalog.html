@@ -47,12 +47,12 @@
     <main>
       <div class="intro">
         <div class="intro__picture">
-          <svg class="index-reasons__under-intro-background" width="600" height="57" viewBox="0 0 600 57"
-            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
+          <svg class="intro__under-intro-background" width="600" height="57" viewBox="0 0 600 57" aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
             <use href="img/sprites/sprite.svg#under-intro-background"></use>
           </svg>
-          <svg class="index-reasons__under-intro-background index-reasons__under-intro-background--right" width="600"
-            aria-hidden="true" height="57" viewBox="0 0 600 57" xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
+          <svg class="intro__under-intro-background intro__under-intro-background--right" width="600" aria-hidden="true"
+            height="57" viewBox="0 0 600 57" xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
             <use href="img/sprites/sprite.svg#under-intro-background"></use>
           </svg>
         </div>
@@ -208,27 +208,28 @@
         </div>
       </div>
 
-      <section class="photo-and-video__video-section container-tablet">
-        <h2 class="visually-hidden">Видеопрезентация</h2>
-        <div class="standard-title-description">
-          <p class="standard-title-description__title">
-            Все еще сомневаетесь?
-          </p>
-          <p class="photo-and-video__video-description standard-title-description__description">
-            Смотрите видеопрезентацию и <br> скорее за билетами, пока они не <br> подорожали в очередной раз!
-          </p>
-        </div>
-
-        <div class="photo-and-video__video-wrapper container">
-          <video class="photo-and-video__video" src="#" width="288" height="177" preload="none"></video>
-          <button class="photo-and-video__video-play-button" type="button">
-            <svg class="photo-and-video__play-button-icon" width="48" height="55" viewBox="0 0 48 55" aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg" fill="white" fill-opacity="0.7">
-              <use href="img/sprites/sprite.svg#video-play-button"></use>
-            </svg>
-          </button>
-        </div>
-      </section>
+      <div class="photo-and-video container-tablet">
+        <section class="photo-and-video__video-section">
+          <h2 class="visually-hidden">Видеопрезентация</h2>
+          <div class="standard-title-description">
+            <p class="standard-title-description__title">
+              Все еще сомневаетесь?
+            </p>
+            <p class="photo-and-video__video-description standard-title-description__description">
+              Смотрите видеопрезентацию и <br> скорее за билетами, пока они не <br> подорожали в очередной раз!
+            </p>
+          </div>
+          <div class="photo-and-video__video-wrapper container">
+            <video class="photo-and-video__video" src="#" width="288" height="177" preload="none"></video>
+            <button class="photo-and-video__video-play-button" type="button">
+              <svg class="photo-and-video__play-button-icon" width="48" height="55" viewBox="0 0 48 55"
+                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="white" fill-opacity="0.7">
+                <use href="img/sprites/sprite.svg#video-play-button"></use>
+              </svg>
+            </button>
+          </div>
+        </section>
+      </div>
     </main>
 
     <footer class="page-footer container-tablet container-desktop">
